@@ -1,5 +1,9 @@
 # Candy Balls — a match-3 game for Unity 2D
 
+> **🎮 Play it right now in your browser:** **https://rajanya-s.github.io/CandyBalls/**
+> No download, no Unity needed — the same game, rebuilt in pure HTML/CSS/JavaScript and served by
+> GitHub Pages from `index.html` + `style.css` + `game.js`.
+
 A complete, playable Candy Crush–style game with colourful glossy balls. Swap two neighbouring
 balls to line up **3 or more of the same colour**. They pop, the balls above fall down, new ones
 drop in, and chains of matches multiply your score.
@@ -36,7 +40,24 @@ The balls, the board, the particles and even the sound effects are created at ru
      └── SceneSmokeTest.cs       headless play-mode sanity check
 ```
 
-## Getting it running
+## Play in the browser (GitHub Pages)
+
+**https://rajanya-s.github.io/CandyBalls/**
+
+The `index.html` / `style.css` / `game.js` trio at the root of this repo is a complete, standalone
+match-3 game with the exact same rules as the Unity version (8×8 board, 6 colours, 30 moves,
+2000-point target, 20 points per ball × cascade multiplier). It uses a canvas for the glossy balls,
+Web Audio for the sounds, and `localStorage` for the best score — no libraries, no assets, no build
+step. Open `index.html` locally or just use the Pages link.
+
+| Action | Browser | Unity |
+| --- | --- | --- |
+| Swap two balls | tap/click both, or drag one onto its neighbour | swipe or tap-to-swap |
+| Restart | `R` or ↻ button | `R` |
+| Mute | `M` or 🔊 button | `M` |
+| Best score | saved in `localStorage` | saved via `PlayerPrefs` |
+
+## Getting it running (the Unity version)
 
 **Option A — open this folder directly (easiest)**
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#1a1035">
+<title>Candy Balls — Play Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <div class="logo"><span></span><span></span><span></span></div>
+      <div>
+        <h1>Candy Balls</h1>
+        <p>Match 3 · a little sugar rush</p>
+      </div>
+    </div>
+    <div class="tools">
+      <button id="soundBtn" class="icon-btn" title="Toggle sound" aria-label="Toggle sound">🔊</button>
+      <button id="restartBtn" class="icon-btn" title="Restart" aria-label="Restart">↻</button>
+    </div>
+  </header>
+
+  <div class="hud">
+    <div class="stat"><span class="label">SCORE</span><strong id="score">0</strong></div>
+    <div class="stat goal"><span class="label">TARGET</span><strong id="target">2000</strong></div>
+    <div class="stat"><span class="label">MOVES</span><strong id="moves">30</strong></div>
+    <div class="stat"><span class="label">BEST</span><strong id="best">0</strong></div>
+  </div>
+
+  <div class="progress"><div id="progressFill"></div></div>
+
+  <div class="board-wrap">
+    <canvas id="board" width="560" height="560" aria-label="Candy Balls game board"></canvas>
+    <div id="overlay" class="overlay hidden">
+      <div class="card">
+        <div id="ovIcon" class="ov-icon">★</div>
+        <h2 id="ovTitle">You win!</h2>
+        <p id="ovText">Sweet!</p>
+        <button id="ovBtn" class="play-btn">Play again</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="hint">Tap two neighbouring balls, or drag a ball, to swap them.</p>
+  <p class="tiny">20 points per ball · ×2, ×3… for chain reactions · made with pure code</p>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
